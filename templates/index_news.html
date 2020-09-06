@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Nomad News---</h1>
+      <div>
+        {% if isPopularPage %}
+          <span>Order By: <strong>Popular</strong> | <a href="/?order_by=new">New</a></span>
+        {% else %}
+          <span>Order By: <a href="/?order_by=popular">Popular</a> | <strong>New</strong></span>
+        {% endif %}
+      </div>
+    </header>
+    <main>
+      {% for story in stories%}
+        <div>
+          <div>
+            <a href="/{{story['objectID']}}"><h3>{{story['title']}}</h3></a>
+            (
+            <a href={{story['url']}} target="_blanl">{{story['url']}}</a>
+            )
+          </div>
+          <div>
+            {{story['points']}} points | By: {{story['author']}} | {{story['num_comments']}} comments
+          </div>
+        </div>
+        <hr>
+      {% endfor %}
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>{{header['title']}}</h1>
+      <div>
+        {{header['points']}} points | By {{header['author']}}
+        <a href="{{header['url']}}">{{header['url']}}</a>
+      </div>
+    </header>
+    <main>
+      {% for child in children %}
+        {% if child['author'] %}
+          <div>
+            <strong>{{child['author']}}:</strong>
+            <p></p>
+            {% autoescape false %}
+              {{child['text']}}
+            {% endautoescape %}
+            <p></p>
+          </div>
+          <hr>
+        {% else %}
+          <div>[deleted]</div>
+        {% endif %}
+      {% endfor %}
+    </main>
+  </body>
+</html>

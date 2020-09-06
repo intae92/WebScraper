@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="/">Reddit Reader</a>
+        </h1>
+
+        <h3>Reading: {{languages}}</h3>
+    </header>
+    <main>
+        {% for db in chooseDb %}
+            <div>
+                <h3>
+                    <a href="https://www.reddit.com/{{db[2]}}" target="_blank">{{db[1]}}</a>
+                </h3>
+                <h4>
+                    {{db[0]}} upvotes ·  r/{{db[3]}}
+                </h4>
+                <hr>
+            </div>
+        {% endfor %}
+    </main>
+</body>
+</html>

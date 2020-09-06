@@ -1,8 +1,9 @@
 # webScraper
 
 Job Web Scraper
-[https://repl.it/@intae92/Day-Thirteen-and-Fourteen](https://repl.it/@intae92/Day-Thirteen-and-Fourteen)
-[https://github.com/intae92/WebScraper](https://github.com/intae92/WebScraper)
+
+- [https://repl.it/@intae92/Day-Thirteen-and-Fourteen](https://repl.it/@intae92/Day-Thirteen-and-Fourteen)
+- [https://github.com/intae92/WebScraper](https://github.com/intae92/WebScraper)
 
 ---
 
@@ -29,6 +30,7 @@ Job Web Scraper
 ![v3](https://github.com/intae92/WebScraper/blob/master/video/scraper3.gif?raw=true)
 
 csv 파일로 데이터 저장
+
 ![v4](https://github.com/intae92/WebScraper/blob/master/video/scraper4.gif?raw=true)
 
 ---

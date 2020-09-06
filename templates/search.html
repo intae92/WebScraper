@@ -4,35 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <style>
-      section {
-        display: grid;
-        gap: 20px;
-        grid-template-columns: repeat(6, 1fr);
-      }
-    </style>
+    <!-- <link rel="stylesheet" href="../static/css/style_search.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_search.css') }}"
+    />
     <title>Document</title>
   </head>
   <body>
-    <h2>search</h2>
-    <h3>Found {{resultsNumber}} results for: {{searchingBy}}</h3>
-    <a href="/export?position={{searchingBy}}">Export to CSV</a>
-    <!-- <a href="/">Export to CSV</a> -->
-    <section>
-      <h4>Title</h4>
-      <h4>Link</h4>
-      <h4>Company</h4>
-      <h4>Location</h4>
-      <h4>Date</h4>
-      <h4>Site</h4>
-      {% for job in jobs %}
-      <span>{{job.title}}</span>
-      <a href="{{job.apply_link}}" target="_blank">Apply</a>
-      <span>{{job.company}}</span>
-      <span>{{job.location}}</span>
-      <span>{{job.date}}</span>
-      <span>{{job.site}}</span>
-      {% endfor %}
+    <header class="header">
+      <h2>Remote Job Search</h2>
+      <h3>Found {{resultsNumber}} results for: {{searchingBy}}</h3>
+    </header>
+    <section class="content">
+      <nav class="left--nav">
+        <div>
+          <a href="/">HOME</a>
+        </div>
+        <a href="/export?position={{searchingBy}}">Export to CSV</a>
+      </nav>
+      <section class="content--section">
+        <!-- <h3>Found {{resultsNumber}} results for: {{searchingBy}}</h3> -->
+        <!-- <a href="/export?position={{searchingBy}}">Export to CSV</a> -->
+        <section class="list--section">
+          <h4 class="job--header">Title</h4>
+          <h4 class="job--header">Link</h4>
+          <h4 class="job--header">Company</h4>
+          <h4 class="job--header">Location</h4>
+          <h4 class="job--header">Date</h4>
+          <h4 class="job--header">Site</h4>
+
+          {% for job in jobs %}
+          <span class="job--block">{{job.title}}</span>
+          <a href="{{job.apply_link}}" target="_blank"
+            ><span class="job--block">Apply</span>
+          </a>
+          <span class="job--block">{{job.company}}</span>
+          <span class="job--block">{{job.location}}</span>
+          <span class="job--block">{{job.date}}</span>
+          <span class="job--block">{{job.site}}</span>
+          {% endfor %}
+        </section>
+      </section>
     </section>
+    <footer class="footer">
+      <a href="https://repl.it/@intae92/Day-Thirteen-and-Fourteen"
+        >https://repl.it/@intae92/Day-Thirteen-and-Fourteen</a
+      >
+    </footer>
   </body>
 </html>

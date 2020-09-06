@@ -5,6 +5,8 @@ from flask import Flask, render_template, request, redirect, send_file
 from remoteok import get_jobs as get_remoteok_jobs
 from weworkremotely import get_jobs as get_weworkremotely_jobs
 from stackoverflow import get_jobs as get_stackoverflow_jobs
+from flask.helpers import url_for
+import os
 
 app = Flask("Remote Jobs Scrapper")
 
@@ -31,9 +33,18 @@ def search():
         if existingjobs:
             jobs = existingjobs
         else:
-            jobs_remoteok = get_remoteok_jobs(position)
-            jobs_wework = get_weworkremotely_jobs(position)
-            jobs_stack = get_stackoverflow_jobs(position)
+            try:
+                jobs_remoteok = get_remoteok_jobs(position)
+            except:
+                jobs_remoteok = []
+            try:
+                jobs_wework = get_weworkremotely_jobs(position)
+            except:
+                jobs_wework = []
+            try:
+                jobs_stack = get_stackoverflow_jobs(position)
+            except:
+                jobs_stack = []
             db[position] = jobs_remoteok + jobs_wework + jobs_stack
             # db[position] = jobs_remoteok
             jobs = db[position]

@@ -6,20 +6,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
+      href="{{ url_for('static', filename='css/style_home.css') }}"
     />
+    <!-- <link rel="stylesheet" href="../static/css/style_home.css" /> -->
     <title>Document</title>
   </head>
   <body>
-    <h2>Job Search</h2>
-    <form action="/search" method="GET">
-      <input
-        type="text"
-        placeholder="Search for a job"
-        required
-        name="position"
-      />
-      <button>Search</button>
-    </form>
+    <section class="header--section">
+      <h2>Remote Job Search</h2>
+      <form action="/search" method="GET">
+        <input
+          type="text"
+          placeholder="Search for a job"
+          required
+          name="position"
+        />
+        <button>Search</button>
+      </form>
+    </section>
+    <section class="content--section">
+      <div class="position_btn--container">
+        <form action="/search" method="GET">
+          <input type="submit" name="position" value="assembly language" />
+          <input type="submit" name="position" value="c" />
+          <input type="submit" name="position" value="c++" />
+          <input type="submit" name="position" value="c#" />
+          <input type="submit" name="position" value="css" />
+          <input type="submit" name="position" value="classic visual vasic" />
+          <input type="submit" name="position" value="nodejs" />
+          <input type="submit" name="position" value="go" />
+          <input type="submit" name="position" value="groovy" />
+          <input type="submit" name="position" value="java" />
+          <input type="submit" name="position" value="javascript" />
+          <input type="submit" name="position" value="html" />
+          <input type="submit" name="position" value="matlab" />
+          <input type="submit" name="position" value="objective-c" />
+          <input type="submit" name="position" value="python" />
+          <input type="submit" name="position" value="r" />
+          <input type="submit" name="position" value="react" />
+          <input type="submit" name="position" value="ruby" />
+          <input type="submit" name="position" value="rust" />
+          <input type="submit" name="position" value="sql" />
+          <input type="submit" name="position" value="swift" />
+          <input type="submit" name="position" value="php" />
+          <input type="submit" name="position" value="perl" />
+          <input type="submit" name="position" value="visulal basic" />
+          <input type="submit" name="position" value="vue" />
+        </form>
+      </div>
+    </section>
+    <div class="footer--logo">
+      <a href="https://repl.it/@intae92/Day-Thirteen-and-Fourteen"
+        >https://repl.it/@intae92/Day-Thirteen-and-Fourteen</a
+      >
+    </div>
   </body>
 </html>

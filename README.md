@@ -8,16 +8,16 @@ Job Web Scraper
 
 ## 목표
 
-세개의 사이트에서 크롤링 후 remote job scraper 구현하기
-스크래퍼, 크롤러의 작동 원리 이해하기
-Requests로 웹페이지 요청하기
-BeautifulSoup로 웹페이지 데이터 추출하기
-csv 파일로 데이터 저장
-flask로 웹페이지 구현하기
+- 세개의 사이트에서 크롤링 후 remote job scraper 구현하기
+- 스크래퍼, 크롤러의 작동 원리 이해하기
+- Requests로 웹페이지 요청하기
+- BeautifulSoup로 웹페이지 데이터 추출하기
+- csv 파일로 데이터 저장
+- flask로 웹페이지 구현하기
 
-stackoverflow: stackoverflow.com/jobs?r=true&q=python
-weworkremotely: https://weworkremotely.com/remote-jobs/search?term=python
-remoteok.io: https://remoteok.io/reote-dev+python-jobs
+- stackoverflow: stackoverflow.com/jobs?r=true&q=python
+- weworkremotely: https://weworkremotely.com/remote-jobs/search?term=python
+- remoteok.io: https://remoteok.io/reote-dev+python-jobs
 
 ---
 
